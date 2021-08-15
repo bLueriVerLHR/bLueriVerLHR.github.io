@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="A small world of BlueRiver">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  <title>
+    
+      复变函数笔记-c1 | --&amp;~ World of Blue_River ~&amp;--
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <span>--&~ World of Blue_River ~&--</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/jsgames/" class="item-link">Jsgames</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/jsgames/" class="menu-link">Jsgames</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>复变函数笔记-c1</h2>
+  <p class="post-date">2021-07-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>复变函数</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="复数的定义和运算"><a href="#复数的定义和运算" class="headerlink" title="复数的定义和运算"></a>复数的定义和运算</h2><p>将复数定义为一对有序实数对$(a,b)$，如果用$\mathbb{R}$记实数的全体，$\mathbb{C}$记复数的全体，那么</p>
+<p>$$<br>\mathbb{C} = { (a,b):a \in \mathbb{R}, b \in \mathbb{R} }<br>$$</p>
+<p>在这个集合里，定义加法和乘法如下</p>
+<p>$$<br>(a,b)+(c,d)=(a+c,b+d) \<br>(a,b)(c,d)=(ac-bd,ad+bc)<br>$$</p>
+<p>容易验证</p>
+<ul>
+<li>加法和乘法满足交换律和结合律；</li>
+<li>$(0,0)$是零元素；</li>
+<li>$(-a,-b)$是$(a,b)$的负元素；</li>
+<li>$(1,0)$是乘法的单位元素；</li>
+<li>每个非零元素$(a,b)$都有逆元素；</li>
+</ul>
+<p>此外，$\mathbb{C}$中的加法和乘法还满足分配律：</p>
+<p>$$<br>[(a,b)+(c,d)] (e,f) = (a,b)(e,f)+(c,d)(e,f)<br>$$</p>
+<p>故在以上基础上，$\mathbb{C}$构成一个域，称为<strong>复数域</strong>。</p>
+<p>如果记</p>
+<p>$$<br>\widetilde{\mathbb{R}} = { (a,0):a \in \mathbb{R} }<br>$$</p>
+<p>那么$\widetilde{\mathbb{R}}$是$\mathbb{C}$的一个子域。我们直接记$(a,0)=a$，在$\mathbb{C}$中，$(0,1)$这个元素有其特殊性，它满足</p>
+<p>$$<br>(0,1)^2 = (0,1)(0,1) = (-1,0) = -1<br>$$</p>
+<p>专门用记号$i$来记$(0,1)$这个元素，于是就有$i^2=-1$。由于$(0,b)=(b,0)(0,1)=bi$，于是每一个复数$(a,b)$都可写成</p>
+<p>$$<br>(a,b) = (a,0) + (0,b) = a+bi<br>$$</p>
+<p>注意：复数域和实数域重要的区别就是在复数域不能定义两个复数的大小关系。</p>
+<h3 id="定义1-1-1-有序域"><a href="#定义1-1-1-有序域" class="headerlink" title="定义1.1.1 有序域"></a>定义1.1.1 有序域</h3><p>域$\mathbb{F}$称为有序域，如果在$\mathbb{F}$的元素间能确定一种关系（记为$a&lt;b$），其满足下列要求：</p>
+<ol>
+<li><p>对$\mathbb{F}$中任意两个元素$a$，$b$，下述三个关系中必有一个而且只有一个成立：<br>$$<br>a&lt;b,a=b,a&gt;b;<br>$$</p>
+</li>
+<li><p>如果$a&lt;b$，$b&lt;c$，那么$a&lt;c$；</p>
+</li>
+<li><p>如果$a&lt;b$，那么对任意$c$，有$a+c&lt;b+c$；</p>
+</li>
+<li><p>如果$a&lt;b$，$c&gt;0$，那么$ac&lt;bc$。</p>
+</li>
+</ol>
+<p>容易知道实数域是有序域。</p>
+<h3 id="定理1-1-2-复数域不是有序域"><a href="#定理1-1-2-复数域不是有序域" class="headerlink" title="定理1.1.2 复数域不是有序域"></a>定理1.1.2 复数域不是有序域</h3><p><strong>证</strong> &ensp; 如果$\mathbb{C}$是有序域，那么因为$i\not ={0}$，$i$与$0$之间必有$i&gt;0$或$i&lt;0$的关系。</p>
+<p>如果$i&gt;0$，则由<code>1.1.1(4)</code>得到$i×i&gt;0×i$，即$-1&gt;0$，再由<code>1.1.1(3)</code>，两端都加$1$得到$0&gt;1$。从另一方面，由$-1&gt;0$得到$-1×(-1)&gt;0×(-1)$，即$1&gt;0$，这和刚才的$0&gt;1$矛盾。</p>
+<p>如果$i&lt;0$，两端都加$-i$，再由<code>1.1.1(4)</code>，两端乘$-i$得到$-1&gt;0$。重复上面的讨论，即可得到$0&gt;1$和$1&gt;0$的矛盾。</p>
+<p>所以复数域不是有序域。</p>
+<p>$Q.E.D$</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Complex_Function" >
+    <span class="tag-code">Complex_Function</span>
+  </a>
+
+  <a href="/tags#Math" >
+    <span class="tag-code">Math</span>
+  </a>
+
+  <a href="/tags#Complex_Function_ed_ustc" >
+    <span class="tag-code">Complex_Function_ed_ustc</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2021/hexo-github-to-blog/">
+        <span class="nav-arrow">← </span>
+        
+          用Hexo和GitHub创建个人Blog
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2021/code-convention/">
+        
+          编写约定
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo="bLueriVerLHR/bLueriVerLHR.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A4%8D%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%AE%97"><span class="toc-nav-text">复数的定义和运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E4%B9%891-1-1-%E6%9C%89%E5%BA%8F%E5%9F%9F"><span class="toc-nav-text">定义1.1.1 有序域</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9A%E7%90%861-1-2-%E5%A4%8D%E6%95%B0%E5%9F%9F%E4%B8%8D%E6%98%AF%E6%9C%89%E5%BA%8F%E5%9F%9F"><span class="toc-nav-text">定理1.1.2 复数域不是有序域</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://blueriverlhr.github.io/2021/complex-func-ed-ustc-c1/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | bLueriVerLHR in GitHub
+    <br>
+    Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>

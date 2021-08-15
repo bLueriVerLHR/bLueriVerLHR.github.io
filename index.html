@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="A small world of BlueRiver">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  <title>
+    
+      --&amp;~ World of Blue_River ~&amp;--
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <span>--&~ World of Blue_River ~&--</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/jsgames/" class="item-link">Jsgames</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/jsgames/" class="menu-link">Jsgames</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/gnome-application-change-close-button/">Arch Linux 下修改 gnome GUI 的关闭，最大，最小键的布局</a>
+      </h2>
+      <p class="article-date">2021年8月14日</p>
+      
+        
+  <a href="/tags#Arch Linux" >
+    <span class="tag-code">Arch Linux</span>
+  </a>
+
+  <a href="/tags#Gnome" >
+    <span class="tag-code">Gnome</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>在做 Gnome 桌面美化时候学习的方法。</p>
+        
+      </div>
+      <a class="more" href="/2021/gnome-application-change-close-button/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/ctl-brightness-arch-nvidia/">在NVIDIA显卡下启动Arch Linux系统的亮度调节功能</a>
+      </h2>
+      <p class="article-date">2021年8月12日</p>
+      
+        
+  <a href="/tags#Arch_Linux" >
+    <span class="tag-code">Arch_Linux</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p><strong>《关于我在Arch Linux上调节亮度用了acpid，brightnessctl，xbacklight也改变不了亮度，于是上网搜索了半天终于发现问题出现在闭源的Nvidia显卡和Arch Linux相性不好，修改了两个系统文件然后重启电脑才搞定问题这件事》</strong><code>XD</code></p>
+        
+      </div>
+      <a class="more" href="/2021/ctl-brightness-arch-nvidia/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/for-neupioneer2021/">先锋网2021开头</a>
+      </h2>
+      <p class="article-date">2021年8月10日</p>
+      
+        
+  <a href="/tags#Default" >
+    <span class="tag-code">Default</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>在我的印象里，先锋网网络部是个很清闲的部门，没啥大事情干，没有什么任务，也不用举办什么活动。</p>
+<p>似乎有一个内部晚会，不过，学长我确实没参加。</p>
+<p>作为一个学生组织的部门，什么事情也没有，是不是稍微有点奇怪？不是有点奇怪，是很奇怪。但奇怪归奇怪，从一个学生组织活到这种类似于社团性质的部门是有一段过程的。只是作为20级的混子，学长我不了解罢了。<code>/(ㄒoㄒ)/~~</code></p>
+<p>想来，网络部每周也都会挑一个时间开一次例会。例会上大家分享一下本周做了些什么，有什么不懂的可以让学长讲解一下。</p>
+<p>20届主要讲的就是Vue全栈技术，应该吧？<code>(T_T)</code>实际上大一的时候太混子了，很多东西没学过，云里雾里的，不过基础内容还是比较了解，会写一点demo（例子）。</p>
+<p>因为这个学期我换了一个校区，可能没办法例会到场，就在网站上写一些先锋网大一学习的内容，同时巩固下自己的知识吧。</p>
+        
+      </div>
+      <a class="more" href="/2021/for-neupioneer2021/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/articles-apprecated/">个人觉得不错的文章</a>
+      </h2>
+      <p class="article-date">2021年8月2日</p>
+      
+        
+  <a href="/tags#Collection" >
+    <span class="tag-code">Collection</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>以下都是一些我看过觉得有用的文章的链接网址。</p>
+<p>未来可能会基于自己的体验，对这些文章进行修改和合并。</p>
+<p>一些文章可能会消失，或者改变标题，这些我无法做到实时改变。</p>
+        
+      </div>
+      <a class="more" href="/2021/articles-apprecated/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/mirrors/">Mirrors</a>
+      </h2>
+      <p class="article-date">2021年8月2日</p>
+      
+        
+  <a href="/tags#Go" >
+    <span class="tag-code">Go</span>
+  </a>
+
+  <a href="/tags#Linux" >
+    <span class="tag-code">Linux</span>
+  </a>
+
+  <a href="/tags#Mirrors" >
+    <span class="tag-code">Mirrors</span>
+  </a>
+
+  <a href="/tags#Julia" >
+    <span class="tag-code">Julia</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>For programmers in China.</p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">Tsinghua</a><br><a target="_blank" rel="noopener" href="http://mirrors.ustc.edu.cn/">USTC</a><br><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/">Ali</a></p>
+        
+      </div>
+      <a class="more" href="/2021/mirrors/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/brainfuck-compiler/">Compiler for Brainfuck</a>
+      </h2>
+      <p class="article-date">2021年8月1日</p>
+      
+        
+  <a href="/tags#C" >
+    <span class="tag-code">C</span>
+  </a>
+
+  <a href="/tags#Go" >
+    <span class="tag-code">Go</span>
+  </a>
+
+  <a href="/tags#Brainfuck" >
+    <span class="tag-code">Brainfuck</span>
+  </a>
+
+  <a href="/tags#Compiler" >
+    <span class="tag-code">Compiler</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>The code is copied from an article in Zhihu. The original answer is <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/434732218/answer/1635894731">here</a>.</p>
+<p>But today I will give a simple introduction to brainfuck as well.</p>
+        
+      </div>
+      <a class="more" href="/2021/brainfuck-compiler/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/code-demo/">代码测试</a>
+      </h2>
+      <p class="article-date">2021年7月31日</p>
+      
+        
+  <a href="/tags#C" >
+    <span class="tag-code">C</span>
+  </a>
+
+  <a href="/tags#Go" >
+    <span class="tag-code">Go</span>
+  </a>
+
+  <a href="/tags#JavaScript" >
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>一些代码小例子，不遵循个人代码规范。</p>
+        
+      </div>
+      <a class="more" href="/2021/code-demo/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/code-convention/">编写约定</a>
+      </h2>
+      <p class="article-date">2021年7月31日</p>
+      
+        
+  <a href="/tags#C" >
+    <span class="tag-code">C</span>
+  </a>
+
+  <a href="/tags#C++" >
+    <span class="tag-code">C++</span>
+  </a>
+
+  <a href="/tags#Python" >
+    <span class="tag-code">Python</span>
+  </a>
+
+  <a href="/tags#Go" >
+    <span class="tag-code">Go</span>
+  </a>
+
+  <a href="/tags#Markdown" >
+    <span class="tag-code">Markdown</span>
+  </a>
+
+  <a href="/tags#JavaScript" >
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>内容顺序：</p>
+<ul>
+<li>该网站原始 md 文档规范</li>
+<li>个人编写语言规范</li>
+</ul>
+        
+      </div>
+      <a class="more" href="/2021/code-convention/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/complex-func-ed-ustc-c1/">复变函数笔记-c1</a>
+      </h2>
+      <p class="article-date">2021年7月30日</p>
+      
+        
+  <a href="/tags#Complex_Function" >
+    <span class="tag-code">Complex_Function</span>
+  </a>
+
+  <a href="/tags#Math" >
+    <span class="tag-code">Math</span>
+  </a>
+
+  <a href="/tags#Complex_Function_ed_ustc" >
+    <span class="tag-code">Complex_Function_ed_ustc</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p>复变函数</p>
+        
+      </div>
+      <a class="more" href="/2021/complex-func-ed-ustc-c1/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2021/hexo-github-to-blog/">用Hexo和GitHub创建个人Blog</a>
+      </h2>
+      <p class="article-date">2021年7月30日</p>
+      
+        
+  <a href="/tags#Hexo" >
+    <span class="tag-code">Hexo</span>
+  </a>
+
+  <a href="/tags#Github" >
+    <span class="tag-code">Github</span>
+  </a>
+
+  <a href="/tags#Git" >
+    <span class="tag-code">Git</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <ul>
+<li>有一个<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>帐号；</li>
+<li>安装了<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>、<a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm</a>，并了解相关知识；</li>
+<li>安装了<a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>。</li>
+</ul>
+<p>说明：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># OS:       Arch Linux</span></span><br><span class="line"><span class="comment"># Shell:    fish</span></span><br><span class="line"><span class="comment"># Editor:   vs code</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Some Output will be omitted.</span></span><br><span class="line"><span class="comment"># The operation system does not matter.</span></span><br><span class="line"><span class="comment"># However the following Article is based on Arch Linux.</span></span><br><span class="line"><span class="comment"># Some operation may be different from other os.</span></span><br></pre></td></tr></table></figure>
+        
+      </div>
+      <a class="more" href="/2021/hexo-github-to-blog/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a class="unvisible" href="/"><span class="page-arrow">←</span> Prev</a>
+  
+  
+    <a href="/page/2/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | bLueriVerLHR in GitHub
+    <br>
+    Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>

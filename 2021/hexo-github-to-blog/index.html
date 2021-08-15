@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="A small world of BlueRiver">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  <title>
+    
+      用Hexo和GitHub创建个人Blog | --&amp;~ World of Blue_River ~&amp;--
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <span>--&~ World of Blue_River ~&--</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/jsgames/" class="item-link">Jsgames</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/jsgames/" class="menu-link">Jsgames</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>用Hexo和GitHub创建个人Blog</h2>
+  <p class="post-date">2021-07-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><ul>
+<li>有一个<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>帐号；</li>
+<li>安装了<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>、<a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm</a>，并了解相关知识；</li>
+<li>安装了<a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>。</li>
+</ul>
+<p>说明：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># OS:       Arch Linux</span></span><br><span class="line"><span class="comment"># Shell:    fish</span></span><br><span class="line"><span class="comment"># Editor:   vs code</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Some Output will be omitted.</span></span><br><span class="line"><span class="comment"># The operation system does not matter.</span></span><br><span class="line"><span class="comment"># However the following Article is based on Arch Linux.</span></span><br><span class="line"><span class="comment"># Some operation may be different from other os.</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<hr>
+<h2 id="1-1-Hexo简介"><a href="#1-1-Hexo简介" class="headerlink" title="1.1 Hexo简介"></a>1.1 Hexo简介</h2><p>Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<ul>
+<li>Hexo 可以理解为是基于node.js制作的一个博客工具，不是我们理解的一个开源的博客系统；</li>
+<li>Hexo 正常来说，不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于在Hexo通过MarkDown编写的文章，然后Hexo帮我们生成静态的html页面，然后，将生成的html上传到我们的服务器。</li>
+</ul>
+<p>简而言之：Hexo是个静态页面生成、上传的工具。</p>
+<h2 id="1-2-安装Hexo"><a href="#1-2-安装Hexo" class="headerlink" title="1.2 安装Hexo"></a>1.2 安装Hexo</h2><p>使用如下指令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~&gt; sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-初始化"><a href="#1-3-初始化" class="headerlink" title="1.3 初始化"></a>1.3 初始化</h2><p>选取一个文件夹，或者创建一个文件夹并打开至当前目录。这里以本人的文件夹为例</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~&gt; <span class="built_in">cd</span> Document</span><br><span class="line">~/Document&gt; mkdir myblog</span><br><span class="line">~/document&gt; <span class="built_in">cd</span> myblog</span><br><span class="line">~/D/myblog&gt; hexo init</span><br></pre></td></tr></table></figure>
+
+<p>Hexo会自动下载文件。目录如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; ls -l</span><br><span class="line">total 208</span><br><span class="line">-rw-r--r--   1 blur blur      0 Jul 30 13:26 _config.landscape.yml</span><br><span class="line">-rw-r--r--   1 blur blur   2642 Jul 30 15:50 _config.yml</span><br><span class="line">-rw-r--r--   1 blur blur  48608 Jul 30 15:50 db.json</span><br><span class="line">drwxr-xr-x 275 blur blur  20480 Jul 30 15:34 node_modules</span><br><span class="line">-rw-r--r--   1 blur blur    724 Jul 30 15:34 package.json</span><br><span class="line">-rw-r--r--   1 blur blur 118417 Jul 30 14:15 package-lock.json</span><br><span class="line">drwxr-xr-x  10 blur blur   4096 Jul 30 15:49 public</span><br><span class="line">drwxr-xr-x   2 blur blur   4096 Jul 30 13:26 scaffolds</span><br><span class="line">drwxr-xr-x   3 blur blur   4096 Jul 30 13:26 <span class="built_in">source</span></span><br><span class="line">drwxr-xr-x   3 blur blur   4096 Jul 30 15:43 themes</span><br></pre></td></tr></table></figure>
+
+<p>blur是我对Blue_River的简写。与Hexo的某一个主题无关哦</p>
+<p>部分文件夹说明：</p>
+<table>
+<thead>
+<tr>
+<th>文件/文件夹</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_config.yml</td>
+<td>配置文件，修改博客的基础配置、模板等</td>
+</tr>
+<tr>
+<td>public</td>
+<td>生成的静态文件，这个目录最终会发布到服务器</td>
+</tr>
+<tr>
+<td>scaffolds</td>
+<td>一些通用的markdown模板</td>
+</tr>
+<tr>
+<td>source</td>
+<td>编写的markdown文件，_drafts草稿文件，_posts发布的文章</td>
+</tr>
+<tr>
+<td>themes</td>
+<td>博客的模板</td>
+</tr>
+</tbody></table>
+<p>Hexo下载办法使用的是npm，所以对于速度慢的，可以将npm换源到淘宝源如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>目前阶段Hexo不会使用cnpm</p>
+<h2 id="1-4-生成html"><a href="#1-4-生成html" class="headerlink" title="1.4 生成html"></a>1.4 生成html</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; hexo g</span><br><span class="line">~/D/myblog&gt; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>上面第一句用于生成页面，第二句用于在本地启动服务预览页面。</p>
+<p>生成的内容保存在public里，而这些文件是将来提交到GitHub上去的。</p>
+<p>hexo s是开启本地预览服务，打开浏览器访问<code>http://localhost:4000</code>即可看到内容。</p>
+<p>很多人会碰到浏览器一直在转圈但是就是加载不出来的问题，一般情况下是因为端占用的缘故。</p>
+<p>先搜索占领4000端口的进程</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; netstat -anp | grep 4000</span><br></pre></td></tr></table></figure>
+
+<p>获取PID然后关闭进程。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; <span class="built_in">kill</span> -9 PID</span><br></pre></td></tr></table></figure>
+
+<p>这样之后再一次搜索4000端口上的进程。如果返回grep出错，即端口可以使用</p>
+<p>第一次初始化的时候，Hexo已经帮我们写好了一篇名为Hello World的文章。</p>
+<h2 id="1-5-修改主题"><a href="#1-5-修改主题" class="headerlink" title="1.5 修改主题"></a>1.5 修改主题</h2><p>可以选择进入<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo官网</a>寻找主题，主题都有<code>README.md</code>可以参考。</p>
+<p>下载下来的主题应该保存在themes中。</p>
+<p>然后修改<code>_config.yml</code>文件，使用<code>ctrl+F</code>寻找<code>theme</code>，将<code>theme: landscape</code>修改为比如：<code>theme: light</code>。</p>
+<p>再次生成页面的时候，页面主题就会改变。</p>
+<h2 id="2-1-上传到GitHub"><a href="#2-1-上传到GitHub" class="headerlink" title="2.1 上传到GitHub"></a>2.1 上传到GitHub</h2><p>Github可以免费搭建个人博客。</p>
+<p>Github有两种形式的page：</p>
+<ul>
+<li>个人或组织的page：只能存在一个，master 分支，地址为 xxx.github.io</li>
+<li>项目page：每个项目可以生成一个，gh-pages 分支，地址为 xxx.github.io/projectname</li>
+</ul>
+<p>这里笔者采用的是个人版本的page，即仓库名需要命名为：github用户名.github.io。</p>
+<p>生成的网址则为<code>https://github用户名.github.io</code>。</p>
+<h2 id="2-2-配置部署信息"><a href="#2-2-配置部署信息" class="headerlink" title="2.2 配置部署信息"></a>2.2 配置部署信息</h2><p>配置<code>_config.yml</code>中有关deploy的部分，使用<code>ctrl+F</code>寻找<code>deploy</code>。</p>
+<p>这里展示的是使用SSH，使用SSH在每次deploy的时候不需要输入密码：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:bLueriVerLHR/bLueriVerLHR.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>其中repository后边是SSH，可以在指定的respository的下载处（下箭头+Code）选择使用SSH获取SSH。</p>
+<p>这里需要个人提前获取好SSH</p>
+<p>方法：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">~/D/myblog&gt; ls</span><br></pre></td></tr></table></figure>
+
+<p>如果没有后缀为pub文件的文件则创建一个SSH key</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; ssh-keygen -t rsa -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>其中<code>your_email@example.com</code>是GitHub的邮箱。</p>
+<p>接下来要求命名生成文件，如果为空，会默认生成生成<code>id_rsa</code>和<code>id_rsa.pub</code>两个秘钥文件。</p>
+<p>接下来会要求设置密码，可以不输入，为空就是不需要密码。</p>
+<p>之后还会有一些输出，看到后基本就是完成了。</p>
+<p>接下来在GitHub上打开个人设置，选择含有SSH的那一个选项，选择SSH keys后面的选项后，title自己命名，下面的内容填写上面操作生成的以pub结尾的文件里的内容。</p>
+<p>注意，前后不能有空格或回车。</p>
+<p>如果没有错误显示，则SSH key就算设置完成了。</p>
+<h2 id="2-3-安装hexo的git插件"><a href="#2-3-安装hexo的git插件" class="headerlink" title="2.3 安装hexo的git插件"></a>2.3 安装hexo的git插件</h2><p>直接执行hexo d的话一般会报如下错误：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+
+<p>原因是还需要安装一个插件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-部署"><a href="#2-4-部署" class="headerlink" title="2.4 部署"></a>2.4 部署</h2><p>使用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>就可以部署。</p>
+<p>不过<code>hexo d</code>会将见到的md文件都渲染。如果希望一些md文件不被渲染，先获取其对于<code>_config.yml</code>的相对位置，然后在<code>_config.yml</code>的文件中的<code>skip_render</code>后面添加内容。比如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">&quot;public/README.md&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-0-常用的hexo命令"><a href="#3-0-常用的hexo命令" class="headerlink" title="3.0 常用的hexo命令"></a>3.0 常用的hexo命令</h2><p>常见命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+
+<p>缩写：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>组合命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-1-写博客"><a href="#4-1-写博客" class="headerlink" title="4.1 写博客"></a>4.1 写博客</h2><p>执行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; hexo new <span class="string">&#x27;my-first-blog&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成名为<code>my-first-blog.md</code>的文件，开头是</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: my-first-blog</span><br><span class="line">date: 2021-07-30 15:52:39</span><br><span class="line"><span class="section">tags: </span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1-1-自定义生成"><a href="#4-1-1-自定义生成" class="headerlink" title="4.1.1 自定义生成"></a>4.1.1 自定义生成</h3><p>相关生成修改应该改变文件夹<code>scaffolds</code>中对应文件的内容。</p>
+<p>完整内容如下：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName</span><br><span class="line">date: 2013-12-02 15:30:16</span><br><span class="line">categories: 默认分类</span><br><span class="line">tags: [tag1,tag2,tag3]</span><br><span class="line"><span class="section">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"> </span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
+<p>答案是在合适的位置加上<code>&lt;!--more--&gt;</code>即可，例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 前言</span></span><br><span class="line"> </span><br><span class="line">使用github pages服务搭建博客的好处有：</span><br><span class="line"> </span><br><span class="line"><span class="bullet">1.</span> 全是静态文件，访问速度快；</span><br><span class="line"><span class="bullet">2.</span> 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</span><br><span class="line"><span class="bullet">3.</span> 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</span><br><span class="line"> </span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"> </span><br><span class="line"><span class="bullet">4.</span> 数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</span><br><span class="line"><span class="bullet">5.</span> 博客内容可以轻松打包、转移、发布到其它平台；</span><br><span class="line"><span class="bullet">6.</span> 等等；</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1-2-new与new-page"><a href="#4-1-2-new与new-page" class="headerlink" title="4.1.2 new与new page"></a>4.1.2 new与new page</h3><p>那么hexo new page ‘postName’命令和hexo new ‘postName’有什么区别呢？</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/D/myblog&gt; hexo new page <span class="string">&quot;my-second-blog&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成页面，但是不会生成在博文目录中。</p>
+<h2 id="4-2-插件"><a href="#4-2-插件" class="headerlink" title="4.2 插件"></a>4.2 插件</h2><p>评论等其他内容添加需要使用插件自己设置。评论插件需要对特定主题，使用特定设定。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Hexo" >
+    <span class="tag-code">Hexo</span>
+  </a>
+
+  <a href="/tags#Github" >
+    <span class="tag-code">Github</span>
+  </a>
+
+  <a href="/tags#Git" >
+    <span class="tag-code">Git</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2021/hello-world/">
+        <span class="nav-arrow">← </span>
+        
+          Hello Everyone!
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2021/complex-func-ed-ustc-c1/">
+        
+          复变函数笔记-c1
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo="bLueriVerLHR/bLueriVerLHR.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-1-Hexo%E7%AE%80%E4%BB%8B"><span class="toc-nav-text">1.1 Hexo简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-2-%E5%AE%89%E8%A3%85Hexo"><span class="toc-nav-text">1.2 安装Hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-3-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-text">1.3 初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-4-%E7%94%9F%E6%88%90html"><span class="toc-nav-text">1.4 生成html</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-5-%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="toc-nav-text">1.5 修改主题</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-1-%E4%B8%8A%E4%BC%A0%E5%88%B0GitHub"><span class="toc-nav-text">2.1 上传到GitHub</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-2-%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">2.2 配置部署信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-3-%E5%AE%89%E8%A3%85hexo%E7%9A%84git%E6%8F%92%E4%BB%B6"><span class="toc-nav-text">2.3 安装hexo的git插件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-4-%E9%83%A8%E7%BD%B2"><span class="toc-nav-text">2.4 部署</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-0-%E5%B8%B8%E7%94%A8%E7%9A%84hexo%E5%91%BD%E4%BB%A4"><span class="toc-nav-text">3.0 常用的hexo命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-1-%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="toc-nav-text">4.1 写博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-1-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E7%94%9F%E6%88%90"><span class="toc-nav-text">4.1.1 自定义生成</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-1-2-new%E4%B8%8Enew-page"><span class="toc-nav-text">4.1.2 new与new page</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-2-%E6%8F%92%E4%BB%B6"><span class="toc-nav-text">4.2 插件</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://blueriverlhr.github.io/2021/hexo-github-to-blog/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | bLueriVerLHR in GitHub
+    <br>
+    Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
