@@ -7,7 +7,7 @@
   <meta name="keyword" content="hexo-theme, vuejs">
   <title>
     
-      在NVIDIA显卡下启动Arch Linux系统的亮度调节功能 | --&amp;~ World of Blue_River ~&amp;--
+      在 NVIDIA 显卡下启动 Arch Linux 系统的亮度调节功能 | --&amp;~ World of Blue_River ~&amp;--
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -185,7 +185,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>在NVIDIA显卡下启动Arch Linux系统的亮度调节功能</h2>
+  <h2>在 NVIDIA 显卡下启动 Arch Linux 系统的亮度调节功能</h2>
   <p class="post-date">2021-08-12</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -194,35 +194,35 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p><strong>《关于我在Arch Linux上调节亮度用了acpid，brightnessctl，xbacklight也改变不了亮度，于是上网搜索了半天终于发现问题出现在闭源的Nvidia显卡和Arch Linux相性不好，修改了两个系统文件然后重启电脑才搞定问题这件事》</strong><code>XD</code></p>
+    <section class="markdown-content"><p><strong>《关于我在 Arch Linux 上调节亮度用了 acpid，brightnessctl，xbacklight 也改变不了亮度，于是上网搜索了半天终于发现问题出现在闭源的 Nvidia 显卡和 Arch Linux 相性不好，修改了两个系统文件然后重启电脑才搞定问题这件事》</strong><code>XD</code></p>
 <span id="more"></span>
 
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Backlight">Backlight</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_60212601/article/details/118866751">Arch / Manjaro Linux 英伟达显卡闭源驱动 调节屏幕亮度失效问题解决方法</a></p>
 <p><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/482569/debian-10-buster-update-grub-command-not-found">Debian 10 Buster | update-grub | command not found</a></p>
-<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><h3 id="1-添加10-nvidia-conf（可能不需要，没测试）"><a href="#1-添加10-nvidia-conf（可能不需要，没测试）" class="headerlink" title="1 添加10-nvidia.conf（可能不需要，没测试）"></a>1 添加10-nvidia.conf（可能不需要，没测试）</h3><p>首先，打开到<code>xorg.conf.d</code>中：</p>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><h3 id="1-添加10-nvidia-conf（可能不需要，没测试）"><a href="#1-添加10-nvidia-conf（可能不需要，没测试）" class="headerlink" title="1 添加10-nvidia.conf（可能不需要，没测试）"></a>1 添加10-nvidia.conf（可能不需要，没测试）</h3><p>首先，打开到 <code>xorg.conf.d</code> 中：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /usr/share/X11/xorg.conf.d</span><br><span class="line">$ ls</span><br></pre></td></tr></table></figure>
 
-<p>查看输出有没有<code>10-nvidia.conf</code>，如果没有，执行下面步骤：</p>
+<p>查看输出有没有 <code>10-nvidia.conf</code>，如果没有，执行下面步骤：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim 10-nvidia.conf</span><br></pre></td></tr></table></figure>
 
 <p>在里面输入如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Section &quot;Device&quot;</span><br><span class="line">        Identifier &quot;Device0&quot;</span><br><span class="line">        Driver &quot;nvidia&quot;</span><br><span class="line">        VendorName &quot;NVIDIA Corporation&quot;</span><br><span class="line">        Option &quot;RegistryDwords&quot; &quot;EnableBrightnessControl=1&quot;</span><br><span class="line">        Option &quot;NoLogo&quot; &quot;True&quot;</span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
 
 <p>保存后退出。</p>
-<h3 id="2-更新grub"><a href="#2-更新grub" class="headerlink" title="2 更新grub"></a>2 更新grub</h3><p>打开<code>grub</code>文件：</p>
+<h3 id="2-更新grub"><a href="#2-更新grub" class="headerlink" title="2 更新grub"></a>2 更新grub</h3><p>打开 <code>grub</code> 文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/default/</span><br><span class="line">$ sudo vim grub</span><br></pre></td></tr></table></figure>
 
-<p>修改<code>GRUB_CMDLINE_LINUX=&quot;&quot;</code>为<code>GRUB_CMDLINE_LINUX=&quot;acpi_backlight=vendor&quot;</code></p>
+<p>修改 <code>GRUB_CMDLINE_LINUX=&quot;&quot;</code> 为 <code>GRUB_CMDLINE_LINUX=&quot;acpi_backlight=vendor&quot;</code></p>
 <p>然后在输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo grub-mkconfig grub</span><br><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
 
 <p>当电脑重启以后就可以调节屏幕亮度了。</p>
-<p>此时你可以在<code>/sys/class/backlight/</code>里看到原来的<code>acpi_video0</code>换成了<code>nvidia_0</code></p>
+<p>此时你可以在 <code>/sys/class/backlight/</code> 里看到原来的 <code>acpi_video0</code> 换成了 <code>nvidia_0</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls /sys/class/backlight/</span><br><span class="line">nvidia_0</span><br></pre></td></tr></table></figure>
 
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>难受，太难受了TAT</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>难受，太难受了 TAT</p>
 <p>原因竟然是显卡。。。</p>
 </section>
     <!-- Tags START -->
@@ -245,7 +245,7 @@
       <a class="nav-left" href="/2021/for-neupioneer2021/">
         <span class="nav-arrow">← </span>
         
-          先锋网2021开头
+          给先锋网网络部新人的一点帮助
         
       </a>
     
