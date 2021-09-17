@@ -853,4 +853,44 @@
         <tag>Gnome</tag>
       </tags>
   </entry>
+  <entry>
+    <title>关于 C++ 的指针和引用</title>
+    <url>/2021/about-reference-and-pointer/</url>
+    <content><![CDATA[<p>关于 C++ 中的引用类型和指针类型。</p>
+<span id="more"></span>
+
+<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><p>我们先看看两个函数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GG</span><span class="params">(<span class="keyword">int</span> &amp;&amp;i, <span class="keyword">int</span> &amp;j)</span> </span>&#123;</span><br><span class="line">    i = j;</span><br><span class="line">    j = i;</span><br><span class="line">    <span class="keyword">return</span> i + j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GG</span><span class="params">(<span class="keyword">int</span> *i, <span class="keyword">int</span> *j)</span> </span>&#123;</span><br><span class="line">    *i = *j;</span><br><span class="line">    *j = *i;</span><br><span class="line">    <span class="keyword">return</span> *i + *j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前者两个参数一个是右值引用一个是左值引用。后者则是一个传递指针。</p>
+<p>在 C++ Primer Plus 中，引用变量作为一个复合类型，是一个已定义变量的别名。</p>
+<h2 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h2><p>接下来我们观察两者在没有优化下的的 g++ 汇编代码。</p>
+<p>这个是使用引用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .file   &quot;blibc.cpp&quot;</span><br><span class="line">    .text</span><br><span class="line">    .globl  _Z2GGOiRi</span><br><span class="line">    .type   _Z2GGOiRi, @function</span><br><span class="line">_Z2GGOiRi:</span><br><span class="line">.LFB0:</span><br><span class="line">    .cfi_startproc</span><br><span class="line">    pushq   %rbp</span><br><span class="line">    .cfi_def_cfa_offset 16</span><br><span class="line">    .cfi_offset 6, -16</span><br><span class="line">    movq    %rsp, %rbp</span><br><span class="line">    .cfi_def_cfa_register 6</span><br><span class="line">    movq    %rdi, -8(%rbp)</span><br><span class="line">    movq    %rsi, -16(%rbp)</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    %edx, (%rax)</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    %edx, (%rax)</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    (%rax), %eax</span><br><span class="line">    addl    %edx, %eax</span><br><span class="line">    popq    %rbp</span><br><span class="line">    .cfi_def_cfa 7, 8</span><br><span class="line">    ret</span><br><span class="line">    .cfi_endproc</span><br><span class="line">.LFE0:</span><br><span class="line">    .size   _Z2GGOiRi, .-_Z2GGOiRi</span><br><span class="line">    .ident  &quot;GCC: (GNU) 11.1.0&quot;</span><br><span class="line">    .section    .note.GNU-stack,&quot;&quot;,@progbits</span><br></pre></td></tr></table></figure>
+
+<p>这个是使用指针：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .file   &quot;blibc.cpp&quot;</span><br><span class="line">    .text</span><br><span class="line">    .globl  _Z2GGPiS_</span><br><span class="line">    .type   _Z2GGPiS_, @function</span><br><span class="line">_Z2GGPiS_:</span><br><span class="line">.LFB0:</span><br><span class="line">    .cfi_startproc</span><br><span class="line">    pushq   %rbp</span><br><span class="line">    .cfi_def_cfa_offset 16</span><br><span class="line">    .cfi_offset 6, -16</span><br><span class="line">    movq    %rsp, %rbp</span><br><span class="line">    .cfi_def_cfa_register 6</span><br><span class="line">    movq    %rdi, -8(%rbp)</span><br><span class="line">    movq    %rsi, -16(%rbp)</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    %edx, (%rax)</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    %edx, (%rax)</span><br><span class="line">    movq    -8(%rbp), %rax</span><br><span class="line">    movl    (%rax), %edx</span><br><span class="line">    movq    -16(%rbp), %rax</span><br><span class="line">    movl    (%rax), %eax</span><br><span class="line">    addl    %edx, %eax</span><br><span class="line">    popq    %rbp</span><br><span class="line">    .cfi_def_cfa 7, 8</span><br><span class="line">    ret</span><br><span class="line">    .cfi_endproc</span><br><span class="line">.LFE0:</span><br><span class="line">    .size   _Z2GGPiS_, .-_Z2GGPiS_</span><br><span class="line">    .ident   &quot;GCC: (GNU) 11.1.0&quot;</span><br><span class="line">    .section    .note.GNU-stack,&quot;&quot;,@progbits</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们观察两者在优化下的的 g++ 汇编代码。优化等级 -Og</p>
+<p>这个是使用引用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .file   &quot;blibc.cpp&quot;</span><br><span class="line">    .text</span><br><span class="line">    .globl  _Z2GGOiRi</span><br><span class="line">    .type   _Z2GGOiRi, @function</span><br><span class="line">_Z2GGOiRi:</span><br><span class="line">.LFB0:</span><br><span class="line">    .cfi_startproc</span><br><span class="line">    movl    (%rsi), %eax</span><br><span class="line">    movl    %eax, (%rdi)</span><br><span class="line">    addl    %eax, %eax</span><br><span class="line">    ret</span><br><span class="line">    .cfi_endproc</span><br><span class="line">.LFE0:</span><br><span class="line">    .size   _Z2GGOiRi, .-_Z2GGOiRi</span><br><span class="line">    .ident  &quot;GCC: (GNU) 11.1.0&quot;</span><br><span class="line">    .section    .note.GNU-stack,&quot;&quot;,@progbits</span><br></pre></td></tr></table></figure>
+
+<p>这个是使用指针：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    .file   &quot;blibc.cpp&quot;</span><br><span class="line">    .text</span><br><span class="line">    .globl  _Z2GGPiS_</span><br><span class="line">    .type   _Z2GGPiS_, @function</span><br><span class="line">_Z2GGPiS_:</span><br><span class="line">.LFB0:</span><br><span class="line">    .cfi_startproc</span><br><span class="line">    movl    (%rsi), %eax</span><br><span class="line">    movl    %eax, (%rdi)</span><br><span class="line">    addl    %eax, %eax</span><br><span class="line">    ret</span><br><span class="line">    .cfi_endproc</span><br><span class="line">.LFE0:</span><br><span class="line">    .size   _Z2GGPiS_, .-_Z2GGPiS_</span><br><span class="line">    .ident  &quot;GCC: (GNU) 11.1.0&quot;</span><br><span class="line">    .section    .note.GNU-stack,&quot;&quot;,@progbits</span><br></pre></td></tr></table></figure>
+
+<p>当优化等级提高，仅仅只是在汇编上增加了一个内存对齐。</p>
+<h2 id="个人看法"><a href="#个人看法" class="headerlink" title="个人看法"></a>个人看法</h2><p>结果看来，C++ 在函数名中会用一些字母表示参数类型什么样的，所以会有所区别。这个是为了服务函数重载而有的区别。而函数体中没有区别。</p>
+<p>C++中的引用是一种较为安全的类型，很类似于 const 指针。在这个例子中，引用和指针没有任何区别，</p>
+<p>所以我得到的结果是，在这个例子中，指针与引用做到了一样的操作。</p>
+]]></content>
+      <categories>
+        <category>Application</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>ASM</tag>
+      </tags>
+  </entry>
 </search>
