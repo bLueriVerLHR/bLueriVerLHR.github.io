@@ -2,8 +2,9 @@
 
 > 不断学习的程序猿
 
-- [杂文](/articles/)
-- [C/CPP学习生活](/cc/)
+- 廉价的努力不断堆砌
+- 有限的才华不断压榨
+- 不屈的灵魂不断前进
 
 [GitHub](https://github.com/bLueriVerLHR)
-[Project](/)
+[Project](https://github.com/bLueriVerLHR/bLueriVerLHR.github.io)

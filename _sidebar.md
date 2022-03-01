@@ -1,1 +1,7 @@
 - [博客介绍](/)
+- [杂文](/articles/)
+- [C/C++](/cc/)
+- [编译原理](/compilers_ptt/)
+- [离散数学](/discrete_math/)
+- [数值分析](/numerical_analysis/)
+- [数字逻辑与数字系统](/numerical_logic_system/)

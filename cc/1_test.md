@@ -432,3 +432,29 @@ int main() {
 如果是 `do-while` 风格，最后的分号如果没有添加会编译报错，但是下面的单纯花括号版本则不会。
 
 但是无论怎么解释，依然是自己习惯的风格最好。
+
+## 预定义宏
+
+|宏名|意义|类型|场景|
+|-|-|-|-|
+|`__LINE__`|该宏所在行|常数|ALL|
+|`__DATE__`|该宏所在文件被编译的年月日|字符串|ALL|
+|`__FILE__`|该宏所在文件的文件名|字符串|ALL|
+|`__BASE_FILE__`|（基本文件名）|字符串|ALL|
+|`__VERSION__`|当前使用的编译器的版本|字符串|ALL|
+|`__COUNTER__`|该宏在该文件中出现次数|常数|ALL|
+|`__TIME__`|该宏所在文件被编译时候的时间|字符串|ALL|
+|`__TIMESTAMP__`|该宏所在文件被编译时候的时间戳|字符串|ALL|
+|`__GNUC__`|编译器的主版本号|常数|非MSVC|
+|`__GNUC_MINOR__`|编译器的次版本号|常数|非MSVC|
+|`__GNUC_PATCHLEVEL__`|编译器的修正版本号|常数|非MSVC|
+|`__cplusplus`|该文件是C++文件||c++|
+|`__gnu_linux__`|该文件环境为GNU Linux环境||linux|
+|`__clang__`|使用clang编译||clang|
+|`__clang_version__`|clang的版本|字符串|clang|
+|`__FILE_NAME__`|该宏所在文件的文件名|字符串|clang|
+|`_WIN32`|Windows 32位模式编译|常数|MSVC|
+|`_WIN64`|Windows 64位模式编译|常数|MSVC|
+|`_MSC_VER`|MSVC简易版本号|常数|MSVC|
+|`_MSC_FULL_VER`|MSVC完整版本号|常数|MSVC|
+|`_DEBUG`|DEBUG模式|常数|MSVC|

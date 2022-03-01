@@ -1,0 +1,1 @@
+- [Home](/discrete_math/)
