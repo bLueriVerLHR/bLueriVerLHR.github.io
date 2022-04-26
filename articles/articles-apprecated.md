@@ -14,9 +14,7 @@
 
 ---
 
-## 链接
-
-### 安装配置
+## 安装配置
 
 - [nginx安装及其配置详细教程](https://www.cnblogs.com/lywJ/p/10710361.html)
 - [Node.js最新最详细安装教程（2020）](https://blog.csdn.net/Small_Yogurt/article/details/104968169)
@@ -25,7 +23,7 @@
 - [Golang安装和配置](https://zhuanlan.zhihu.com/p/82615237)
 - [2021 Archlinux双系统安装教程（超详细）](https://zhuanlan.zhihu.com/p/138951848)
 
-### 技术相关
+## 技术相关
 
 - [Gokins1.0 来啦~](https://zhuanlan.zhihu.com/p/391021123)
 - [一般的galgame会用什么软件制作呢？](https://www.zhihu.com/question/267683857/answer/335484161)
@@ -58,3 +56,7 @@
 - [【Linux】解决用vi修改文件,保存文件时,提示“readonly option is set”](https://www.cnblogs.com/theWinter/p/10640670.html)
 - [DDoSolitary/LxRunOffline](https://github.com/DDoSolitary/LxRunOffline)
 - [LINUX C语言 printf 输出颜色 属性控制 打印带颜色字体（简单易理解）printf带0X前缀输出控制](https://blog.csdn.net/qq_41673920/article/details/80334557)
+
+## 一般知识
+
+- [如何正确的引用网络文献](https://zhuanlan.zhihu.com/p/336771925)
