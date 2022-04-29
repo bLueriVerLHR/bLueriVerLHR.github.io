@@ -1,2 +1,0 @@
-- [Home](/numerical_analysis/)
-- [引论](/numerical_analysis/1_intro.md)

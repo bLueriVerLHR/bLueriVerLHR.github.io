@@ -8,3 +8,5 @@
 
 [GitHub](https://github.com/bLueriVerLHR)
 [Project](https://github.com/bLueriVerLHR/bLueriVerLHR.github.io)
+
+![](/_media/cover_imge/bilibili_void.jpg)
