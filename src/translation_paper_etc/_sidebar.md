@@ -1,0 +1,2 @@
+- [Home](/src/translation_paper_etc/)
+- [超链接](/src/translation_paper_etc/srcs.md)
