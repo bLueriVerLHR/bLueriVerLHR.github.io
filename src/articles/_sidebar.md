@@ -6,4 +6,3 @@
 - [Compiler for Brainfuck](/src/articles/brainfuck-compiler.md)
 - [代码测试](/src/articles/code-demo.md)
 - [用 Hexo 和 GitHub 创建个人 Blog](/src/articles/hexo-github-to-blog.md)
-- [写电子邮件联系导师时的一些小贴士](/src/articles/how_to_email_teacher.md)
