@@ -2,5 +2,5 @@
 - [杂文](/src/articles/)
 - [C/C++](/src/cc/)
 - [数字逻辑与数字系统](/src/numerical_logic_system/)
-- [翻译、论文、搬运和超链接](/src/translation_paper_etc/)
-- [术语表](/src/terminology/)
+- [翻译、论文、搬运和传送门](/src/translation_paper_etc/)
+- [词汇表](/src/terminology/)

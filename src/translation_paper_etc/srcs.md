@@ -35,6 +35,17 @@
 - [An introduction to Quaternions](https://gabormakesgames.com/quaternions.html)
 - [Vertex Shader](https://blog.csdn.net/qq_44884706/article/details/89397729)
 - [在WSL2中安装ArchLinux](https://zhuanlan.zhihu.com/p/266585727)
+- [The std::invoke function does more than invoke functions](https://devblogs.microsoft.com/oldnewthing/20220401-00/?p=106426)
+
+## wiki内容
+
+- [哈韦尔-哈基米算法](https://en.wikipedia.org/wiki/Havel%E2%80%93Hakimi_algorithm)
+
+## 代码风格文档
+
+- [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
+- [Google Style Guides](https://google.github.io/styleguide/)
+- [Python Enhancement Proposals](https://peps.python.org/)
 
 ## 个人文章（不在此处）
 - [[C++][TMP]计算类型数组对应的大小数组](https://www.bilibili.com/read/cv15171319)

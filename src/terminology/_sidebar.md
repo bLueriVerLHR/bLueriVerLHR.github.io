@@ -1,1 +1,4 @@
 - [Home](/src/terminology/)
+- [编程语言术语表](/src/terminology/term_list.md)
+- [技术单词表](/src/terminology/tech_word_list.md)
+- [生词](/src/terminology/norm_word.md)
