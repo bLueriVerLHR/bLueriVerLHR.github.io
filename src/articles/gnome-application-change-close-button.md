@@ -12,7 +12,7 @@
 
 ## 参考文章
 
-[gnome 应用窗口 关闭、最小化、最大化 按钮的位置设置](https://blog.csdn.net/lengchu_org/article/details/81022724)
+- [gnome 应用窗口 关闭、最小化、最大化 按钮的位置设置](https://blog.csdn.net/lengchu_org/article/details/81022724)
 
 ## 操作
 

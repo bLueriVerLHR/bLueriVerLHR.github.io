@@ -4,4 +4,4 @@
 
 可参考资料：
 
-_Digital Electronics and Logic Design Tutorials_, GeeksForGeeks: <https://www.geeksforgeeks.org/digital-electronics-logic-design-tutorials>
+- [Digital Electronics and Logic Design Tutorials](https://www.geeksforgeeks.org/digital-electronics-logic-design-tutorials)

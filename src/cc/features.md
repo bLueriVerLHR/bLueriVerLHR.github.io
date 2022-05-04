@@ -64,4 +64,5 @@ int main() {
 
 C++也可这么写，但是说法应该叫文件域内的一种动态初始化。具体名称不够了解。
 
-参考：<https://stackoverflow.com/questions/14075194/variable-length-arrays-vla-in-c-and-c#:~:text=C%2B%2B%20doesn%27t%20have%20VLA%2C%20but%20it%20has%20dynamic,contain%20a%20const%20qualified%20object%2C%20which%20isn%27t%20allowed.>
+参考：
+- [Variable length arrays (VLA) in C and C++](https://stackoverflow.com/questions/14075194/variable-length-arrays-vla-in-c-and-c#:~:text=C%2B%2B%20doesn%27t%20have%20VLA%2C%20but%20it%20has%20dynamic,contain%20a%20const%20qualified%20object%2C%20which%20isn%27t%20allowed.)

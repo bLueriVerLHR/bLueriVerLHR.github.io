@@ -155,4 +155,5 @@
 |Adjacency List|邻接表|
 |Minimum Cost Spanning Tree|最小代价生成树|
 |Average search Length，ASL|平均查找长度|
+|Activity on Vertex Network|AOV网|
 
