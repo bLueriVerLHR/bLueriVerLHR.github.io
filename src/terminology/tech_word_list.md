@@ -156,4 +156,5 @@
 |Minimum Cost Spanning Tree|最小代价生成树|
 |Average search Length，ASL|平均查找长度|
 |Activity on Vertex Network|AOV网|
+|Directed Acyclic Graph, DAG|有向无环图|
 

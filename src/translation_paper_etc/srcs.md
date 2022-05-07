@@ -56,6 +56,7 @@
 - [MSDN](https://docs.microsoft.com/zh-cn/)
 - [LIBSVM Tools](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/)
 - [Helix](https://docs.helix-editor.com/)
+- [Cloudflare](https://www.cloudflare.com/zh-cn/learning/)
 
 ## 参考网站
 
@@ -69,11 +70,6 @@
 - [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/)
 - [Google Style Guides](https://google.github.io/styleguide/)
 - [Python Enhancement Proposals](https://peps.python.org/)
-
-## 个人文章（不在此处）
-- [[C++][TMP]计算类型数组对应的大小数组](https://www.bilibili.com/read/cv15171319)
-- [[C++][TMP]利用SFINAE判断类型是否包含子类型](https://www.bilibili.com/read/cv15168233)
-- [[C++][TMP]利用GCC报错信息中打印100以内素数](https://www.bilibili.com/read/cv15125670)
 
 ## ACGN
 
@@ -156,6 +152,7 @@
 - [最牛X的GCC 内联汇编](https://www.linuxprobe.com/gcc-how-to.html)
 - [gcc嵌入汇编](https://blog.51cto.com/nxlhero/1099568)
 - [What are microservices?](https://microservices.io/)
+- [A Simple Explanation of Continuity Correction in Statistics](https://www.statology.org/continuity-correction/)
 
 ## 一般
 
