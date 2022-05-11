@@ -4,3 +4,4 @@
 - [数字逻辑与数字系统](/src/numerical_logic_system/)
 - [翻译、论文、搬运和传送门](/src/translation_paper_etc/)
 - [词汇表](/src/terminology/)
+- [算法](/src/algorithms/)

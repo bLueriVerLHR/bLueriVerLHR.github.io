@@ -57,6 +57,9 @@
 - [LIBSVM Tools](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/)
 - [Helix](https://docs.helix-editor.com/)
 - [Cloudflare](https://www.cloudflare.com/zh-cn/learning/)
+- [Open Standards](https://www.open-std.org/)
+- [ANTLR](https://www.antlr.org/)
+
 
 ## 参考网站
 
@@ -116,6 +119,7 @@
 - [Keep Coding](https://liujiacai.net/)
 - [Michael P Little](https://qugeek.com/)
 - [向禹](https://yuxtech.club/)
+- [Why were abbrev. lambdas rejected?](https://brevzin.github.io/c++/2020/01/15/abbrev-lambdas/)
 - [找人]
     - [void-shana 学长](http://void-shana.moe/)
     - [yunlang 校友](https://yl4869.github.io/)
@@ -151,8 +155,9 @@
 - [汇编语言标志位 含义 NV UP EI NG NZ AC PE CY](https://blog.csdn.net/jiajiayouba/article/details/8593905)
 - [最牛X的GCC 内联汇编](https://www.linuxprobe.com/gcc-how-to.html)
 - [gcc嵌入汇编](https://blog.51cto.com/nxlhero/1099568)
-- [What are microservices?](https://microservices.io/)
+- [What are MicroServices?](https://microservices.io/)
 - [A Simple Explanation of Continuity Correction in Statistics](https://www.statology.org/continuity-correction/)
+- [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
 
 ## 一般
 
