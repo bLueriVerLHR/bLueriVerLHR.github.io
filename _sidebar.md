@@ -5,3 +5,7 @@
 - [翻译、论文、搬运和传送门](/src/translation_paper_etc/)
 - [词汇表](/src/terminology/)
 - [算法](/src/algorithms/)
+- [编译原理](/src/compilers_ptt/)
+- [量化交易](/src/quantitative_trading/)
+- [数学](/src/math/)
+- [汇编语言](/src/assembly_lang/)
