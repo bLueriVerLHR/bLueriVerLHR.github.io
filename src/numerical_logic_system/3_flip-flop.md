@@ -11,6 +11,7 @@
 
 ### 闩锁电路
 
+> [!ATTENTION]
 > 闩锁的闩（shuan）
 
 ![闩锁电路](../../_media/pics/numerical_logic_system/3-1.png)

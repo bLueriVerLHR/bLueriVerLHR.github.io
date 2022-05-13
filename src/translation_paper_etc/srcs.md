@@ -158,6 +158,7 @@
 - [What are MicroServices?](https://microservices.io/)
 - [A Simple Explanation of Continuity Correction in Statistics](https://www.statology.org/continuity-correction/)
 - [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
+- [Registers in x86 Assembly](https://www.cs.uaf.edu/2017/fall/cs301/lecture/09_11_registers.html)
 
 ## 一般
 
