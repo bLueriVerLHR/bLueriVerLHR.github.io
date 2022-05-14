@@ -3,3 +3,4 @@
 - [计算类型数组对应的大小数组](/src/algorithms/tmp_calculate_type_array.md)
 - [利用GCC报错信息打印100以内的素数](/src/algorithms/tmp_primes.md)
 - [利用SFINAE判断类型是否包含子类型](/src/algorithms/tmp_sfinea_check_type.md)
+- [算法导论 笔记](/src/algorithms/Intro_Algo/)

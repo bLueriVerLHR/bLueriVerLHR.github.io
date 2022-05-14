@@ -120,7 +120,7 @@
 - [Michael P Little](https://qugeek.com/)
 - [向禹](https://yuxtech.club/)
 - [Why were abbrev. lambdas rejected?](https://brevzin.github.io/c++/2020/01/15/abbrev-lambdas/)
-- [找人]
+- 找人
     - [void-shana 学长](http://void-shana.moe/)
     - [yunlang 校友](https://yl4869.github.io/)
     - [Avery 学长](https://blog.averykl.art/)
