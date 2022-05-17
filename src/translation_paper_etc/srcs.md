@@ -67,6 +67,7 @@
 - [cplusplus](https://www.cplusplus.com/reference/)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)
 - [EDUCBA](https://www.educba.com/)
+- [OI WIKI](https://oi-wiki.org/)
 
 ## 代码风格文档
 
@@ -159,6 +160,7 @@
 - [A Simple Explanation of Continuity Correction in Statistics](https://www.statology.org/continuity-correction/)
 - [Getting Started with ANTLR in C++](https://tomassetti.me/getting-started-antlr-cpp/)
 - [Registers in x86 Assembly](https://www.cs.uaf.edu/2017/fall/cs301/lecture/09_11_registers.html)
+- [C++ Templates – A detailed overview](https://thecppdev.com/2022/05/16/templates-in-c-a-detailed-overview/?amp=1)
 
 ## 一般
 
@@ -172,6 +174,10 @@
 - [CodePen](https://codepen.io/trending)
 - [Data Structure Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 - [Ubuntu Pastebin](https://pastebin.ubuntu.com/)
+- [carbon](https://carbon.now.sh/)
+- [code to image](https://codetoimage.com/)
+- [ray.so](https://ray.so/)
+- [highlight code](https://highlightcode.com/)
 
 ## 文献查阅
 

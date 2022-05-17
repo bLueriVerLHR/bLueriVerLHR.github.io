@@ -1,3 +1,7 @@
 - [Home](/src/cc/)
 - [一点宏](/src/cc/test.md)
 - [零散的特性](/src/cc/features.md)
+- [计算类型数组对应的大小数组](/src/cc/tmp_calculate_type_array.md)
+- [利用GCC报错信息打印100以内的素数](/src/cc/tmp_primes.md)
+- [利用SFINAE判断类型是否包含子类型](/src/cc/tmp_sfinea_check_type.md)
+- [冒泡排序的模板元编程实现](/src/cc/tmp_bubble_sort.md)
