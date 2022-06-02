@@ -1,2 +1,0 @@
-- [Home](/src/assembly_lang/)
-- [介绍](/src/assembly_lang/1_intro.md)

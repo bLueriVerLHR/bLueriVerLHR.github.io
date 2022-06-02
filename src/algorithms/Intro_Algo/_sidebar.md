@@ -1,4 +1,0 @@
-- [home](/src/algorithms/Intro_Algo/)
-- 基础知识
-    - [算法在计算中的作用](/src/algorithms/Intro_Algo/p1c1_intro.md)
-    - [算法基础](/src/algorithms/Intro_Algo/p1c2_base.md)

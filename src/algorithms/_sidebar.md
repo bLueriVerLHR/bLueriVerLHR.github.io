@@ -1,3 +1,2 @@
 - [Home](/src/algorithms/)
-- [拓扑排序](/src/algorithms/toposort.md)
-- [算法导论 笔记](/src/algorithms/Intro_Algo/)
+- [P和NP](/src/algorithms/p_np.md)

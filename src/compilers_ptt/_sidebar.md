@@ -1,4 +1,0 @@
-- [Home](/src/compilers_ptt/)
-- [简介](/src/compilers_ptt/1_intro.md)
-- [形式语言基础](/src/compilers_ptt/2_formal_language.md)
-- [SysY2022 编译器制作日记](/src/compilers_ptt/X_SysY2022_compiler_diary.md)

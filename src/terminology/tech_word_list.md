@@ -157,4 +157,12 @@
 |Average search Length，ASL|平均查找长度|
 |Activity on Vertex Network|AOV网|
 |Directed Acyclic Graph, DAG|有向无环图|
-
+|trait|特征|
+|typo|<非正式>排印错误，输入错误|
+|vendors|供应商|
+|disjunction|析取|
+|obscure|难以说清的，模糊的|
+|cognitive load|认知负荷|
+|acronym|首字母缩写|
+|jargon|行话，黑话|
+|scaffold|脚手架|
