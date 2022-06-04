@@ -5,3 +5,4 @@
 - [搬运](/src/etc/)
 - [词汇表](/src/terminology/)
 - [算法](/src/algorithms/)
+- [ysy2022编译器日记](/src/ysy2022/)

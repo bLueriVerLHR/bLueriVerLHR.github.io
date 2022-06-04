@@ -1,10 +1,15 @@
-# 零散的特性
+# 常量折叠
 
-## 常量折叠
+```
+os              == arch linux
+gcc     version == 12.1.0-2
+glibc   version == 2.35-5
+```
 
 观察一个现象。
 
 ``` cpp
+// main.cpp / main.c
 const int a = 10;
 int b[a];
 int main() {
@@ -14,6 +19,16 @@ int main() {
 
 这是一段在C++内合法的的代码，但是在C语言里不合法。
 
+``` bash
+# gcc 报错
+
+main.c:3:5: error: variably modified ‘b’ at file scope
+    2 | int b[a];
+      |     ^
+
+# 如果是 clang 编译，他会使用常量折叠进行优化
+```
+
 实际情况是，这是一种外表像 `VLA`，但本质是一种常量折叠（也即常量合并）的东西。
 
 `const` 关键字告诉编译器，这个只读变量在编译期间可以看作一个常量。所以在编译期间，`a` 就会用10替换并计算。
@@ -21,6 +36,7 @@ int main() {
 下面代码也是常量折叠现象的一个例子：
 
 ``` cpp
+// main.cpp
 #include <iostream>
 
 int main() {
@@ -45,24 +61,4 @@ int main() {
 
 在编译期间，`c` 的初始化用到的是常量 `a`，所以是以10替换过。在运行时打印时候，`c` 的值就是10。但是在运行时，`a` 的值被修改了，所以运行时对 `a` 值进行打印时候，用的就是1了。可以看出打印行为是运行时的。
 
-## VLA
-
-很不推荐用。
-
-原因查看本文：[The (too) many pitfalls of VLA in C](https://blog.joren.ga/programming/vla-bad)
-
-例子：
-
-``` c
-int main() {
-    int a = 10; // const int a = 10; 也可以
-    int b[a];
-}
-```
-
-这是C语言支持的，在栈上进行动态内存分配的技巧。但是会栈溢出，溢出后就会炸，不是返回 `NULL` 那样给个标志。
-
-C++也可这么写，但是说法应该叫文件域内的一种动态初始化。具体名称不够了解。
-
-参考：
-- [Variable length arrays (VLA) in C and C++](https://stackoverflow.com/questions/14075194/variable-length-arrays-vla-in-c-and-c#:~:text=C%2B%2B%20doesn%27t%20have%20VLA%2C%20but%20it%20has%20dynamic,contain%20a%20const%20qualified%20object%2C%20which%20isn%27t%20allowed.)
+常量折叠可以用于编译期运算。

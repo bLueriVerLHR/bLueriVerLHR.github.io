@@ -3,4 +3,7 @@
 - [在 NVIDIA 显卡下启动 Arch Linux 系统的亮度调节功能](/src/articles/ctl-brightness-arch-nvidia.md)
 - [Compiler for Brainfuck](/src/articles/brainfuck-compiler.md)
 - [代码测试](/src/articles/code-demo.md)
-- [用 Hexo 和 GitHub 创建个人 Blog](/src/articles/hexo-github-to-blog.md)
+- [用 Hexo 和 GitHub 创建个人 Blog](/src/articles/hexo-github-to-blog.md)- [计算类型数组对应的大小数组](/src/cc/tmp_calculate_type_array.md)
+- [利用GCC报错信息打印100以内的素数](/src/articles/tmp_primes.md)
+- [利用SFINAE判断类型是否包含子类型](/src/articles/tmp_sfinea_check_type.md)
+- [冒泡排序的模板元编程实现](/src/articles/tmp_bubble_sort.md)
