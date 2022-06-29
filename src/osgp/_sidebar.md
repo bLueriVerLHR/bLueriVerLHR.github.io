@@ -1,0 +1,2 @@
+- [Home](/src/osgp/)
+- [夜羊社游戏脚本转换为renpy](/src/osgp/yys_gal_to_renpy.md)
