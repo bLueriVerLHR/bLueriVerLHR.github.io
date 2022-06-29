@@ -1,2 +1,0 @@
-- [Home](/src/algorithms/)
-- [P和NP](/src/algorithms/p_np.md)

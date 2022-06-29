@@ -1,8 +1,0 @@
-- [Home](/src/etc/)
-- [文件列表](/src/etc/file_paths.md)
-- [Var，Let和Const有何不同？](/src/etc/diff_var_let_const.md)
-- [解决用vi修改文件、保存文件时，提示 "readonly option is set"](/src/etc/vi_read_only.md)
-- [控制台输出颜色控制](/src/etc/colorful_console.md)
-- [如何正确的引用网络文献](/src/etc/how_to_site_web_articles.md)
-- [写电子邮件联系导师时的一些小贴士](/src/etc/how_to_email_teacher.md)
-- [中华人民共和国身份证号码组成](/src/etc/id_in_china.md)
