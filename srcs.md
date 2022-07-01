@@ -17,6 +17,7 @@
 - [ArchWiki](https://wiki.archlinux.org/)
 - [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 - [哈韦尔-哈基米算法](https://en.wikipedia.org/wiki/Havel%E2%80%93Hakimi_algorithm)
+- [octave](https://wiki.octave.org/GNU_Octave_Wiki)
 
 ## 项目
 
@@ -66,6 +67,7 @@
 - [Open Standards](https://www.open-std.org/)
 - [ANTLR](https://www.antlr.org/)
 - [scrapy](https://scrapy.org/)
+- [octave](https://docs.octave.org/latest/)
 
 ## 参考网站
 
@@ -199,6 +201,7 @@
 - [code to image](https://codetoimage.com/)
 - [ray.so](https://ray.so/)
 - [highlight code](https://highlightcode.com/)
+- [tutorialspoint](https://www.tutorialspoint.com/index.htm)
 
 ## 文献查阅
 
