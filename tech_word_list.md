@@ -166,3 +166,4 @@
 |acronym|首字母缩写|
 |jargon|行话，黑话|
 |scaffold|脚手架|
+|ODR(One Definition Rule)|一次定义规则|
