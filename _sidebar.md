@@ -1,6 +1,3 @@
 - [博客介绍](/)
 - [文章](https://blueriverlhr.github.io/articles_share/)
-- [传送门](/srcs.md)
-- [技术单词表](/tech_word_list.md)
-- [术语表](/term_list.md)
 - [好用工具](/utils.md)

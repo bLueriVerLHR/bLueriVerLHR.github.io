@@ -27,7 +27,7 @@
 struct MyStruct {
     int a{1};
     int b{0};
-}ms;
+} ms;
 
 auto &[v, u] = ms;
 ```
