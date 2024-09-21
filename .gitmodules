@@ -1,0 +1,3 @@
+[submodule "bLueriVerLHR/themes/archie"]
+	path = bLueriVerLHR/themes/archie
+	url = https://github.com/athul/archie.git
