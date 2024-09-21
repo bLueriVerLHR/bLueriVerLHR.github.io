@@ -1,7 +1,7 @@
 ---
 title: "新手学术写作中的若干常见问题"
 description: "学长编写，重新排版；含个人理解，对文字有修饰修改。"
-authors: `艾新` `王千阁`
+authors: ["艾新", "王千阁"]
 date: 2024-09-21T17:50:27+08:00
 draft: false
 tags: ["writing paper"]
