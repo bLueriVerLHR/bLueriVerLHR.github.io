@@ -1,4 +1,4 @@
 +++
-author = "bLueriVerLHR"
+author = "Hugo Authors"
 +++
 
