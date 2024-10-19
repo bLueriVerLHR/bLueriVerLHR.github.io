@@ -39,7 +39,7 @@ Use `ssh-keygen` to generate a new ssh-key. The `ALGORITHM` could be `ed25519` o
 
 ``` bash
 ssh-keygen -t ALGORITHM -C "your_email@example.com"
-# $ ssh-keygen -t ed25519 -C "your_email@example.com"
+# ssh-keygen -t ed25519 -C "your_email@example.com"
 
 # > Enter file in which to save the key (~/.ssh/id_ALGORITHM):[Press enter]
 # > Enter passphrase (empty for no passphrase): [Type a passphrase]

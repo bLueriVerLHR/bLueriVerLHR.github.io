@@ -8,17 +8,16 @@ tags: ["windows", "manuel"]
 toc: true
 ---
 
-## DNS PROBE FINISHED NO INTERNET
+## DNS_PROBE_FINISHED_NO_INTERNET
 
 Sometimes, when we suddenly close the connection with hotspot networks, the Windows will encounter this problem.
 To solve the problem, follow the following steps:
 
 ``` sh
-ipconfig /release
-ipconfig /all
+ipconfig /release *
 ipconfig /flushdns
 ipconfig /renew
-netsh winsock reset catalog
+netsh winsock reset
 netsh int ip reset
 ```
 
