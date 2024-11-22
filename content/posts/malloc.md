@@ -2,7 +2,7 @@
 title: "Malloc"
 description: "About malloc."
 authors: ["bLueriVerLHR"]
-date: 2024-11-05T13:35:30+08:00
+date: 2024-11-22T21:26:42+08:00
 draft: true
 tags: ["malloc", "operating system", "memory management"]
 toc: true
