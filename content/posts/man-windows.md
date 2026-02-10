@@ -22,3 +22,17 @@ netsh int ip reset
 ```
 
 The above instructions aim to reset Windows network caches totally.
+
+## Set detailed menu as default in Windows 11
+
+To Enable the feature:
+
+``` cmd
+reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /ve /d "" /f
+```
+
+To disable the feature:
+
+``` cmd
+reg delete HKCU\SOFTWARE\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2} /f
+```
