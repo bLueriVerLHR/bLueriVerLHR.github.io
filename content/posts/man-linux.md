@@ -116,3 +116,20 @@ apt-get install -y kitware-archive-keyring
 apt-get install -y cmake
 ```
 
+## Terminal Process Detachment
+
+When a process is running in the foreground, you can detach it to run in the background.
+
+``` bash
+# 1. Press Ctrl+Z to suspend the process
+# 2. Type bg to resume it in the background
+bg
+
+# 3. Type disown to detach from the current shell
+disown
+```
+
+> **Note:** After `disown`, the process will continue running even if you close the terminal, but output will still print to the terminal (if any).
+
+
+
