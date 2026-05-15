@@ -24,13 +24,13 @@ Linux blur-personal 5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:1
 The order of paths in `PATH` will define the priority that the shell will use when there is two programs with the same name.
 
 ```
-blur@blur-personal: ~$ ls ~/Software/
+$ ls ~/Software/
 make  gcc
-blur@blur-personal: ~$ ls ~/Default/
+$ ls ~/Default/
 gcc  g++
-blur@blur-personal: ~$ export PATH=~/Software:~/Default
-blur@blur-personal: ~$ which gcc
-/home/user/Software/gcc
+$ export PATH=~/Software:~/Default
+$ which gcc
+~/Software/gcc
 ```
 
 ### uname
@@ -39,7 +39,7 @@ blur@blur-personal: ~$ which gcc
 Usually, we use `uname -r` to see information about kernel release.
 
 ```
-blur@blur-personal: ~$ uname -r
+$ uname -r
 5.15.153.1-microsoft-standard-WSL2
 ```
 
