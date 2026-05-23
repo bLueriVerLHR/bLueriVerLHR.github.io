@@ -31,7 +31,7 @@ Depending on the status recorded for each cache line — such as recency, freque
 |Segmented LRU (Seg-LRU/SLRU)[^SLRU]|MRU in _probationary_ segment|MRU in _protected_ segment|Move 1 position towards LRU|LRU from _probationary_ segment|Recency|
 |Bimodal Insertion Policy (BIP)|MRU with probability $\epsilon$[^BIP]|MRU|Move 1 position towards LRU|LRU|Recency|
 |Static Re-Reference Interval Prediction ([SRRIP](#static-re-reference-interval-prediction))|RRPV=2|RRPV=0|Increment all RRPVs (if no line with RRPV=3)|RRPV=3|RRPV|
-|Bimodal re-reference interval prediction policy (BRRIP)|Default RRPV=3, RRPV=2 with probability $\epsilon$[^BIP]|RRPV=0|Increment all RRPVs (if no line with RRPV=3)|RRPV=3|RRPV|
+|Bimodal re-reference interval prediction policy (BRRIP)|Default RRPV=3, RRPV=2 with probability $\epsilon$|RRPV=0|Increment all RRPVs (if no line with RRPV=3)|RRPV=3|RRPV|
 |Protecting Distance-Based Policy (PDP)[^PDP]|RPD=PD|RPD=PD|Decrease RPD|RPD=0|RPD|
 |Genetic Insertion and Promotion for PseudoLRU Replacement (GIPPR)[^GIPPR]|IPV[k]|IPV[i] for i-th state|i+1 for i-th state|k-1|IPV|
 |Shepherd Cache (SC)[^SC]| | | | |Recency|
@@ -70,6 +70,8 @@ For example, candidates that are reused earlier become less likely candidates fo
 When the new line is evicted from the SC (due to other insertions in the SC), a replacement candidate is chosen by either picking a candidate from the MC that hasn’t been reused within the lookahead window, or the candidate that was reused last; if all lines in the MC were reused before the SC line was reused, then the SC line replaces itself.
 
 [^LRFU]: The policy use a new metric called _Combined Recency and Frequency_ (CRF).
+It weighs the relative contribution of each reference by a weighing function.
+In particular, LRFU computes for each block a CRF value, which is the sum of the weighing function $F(x)$ for each past reference, where $x$ is the distance of the past reference from the current time. The weight function is $F(x)=(\frac{1}{p})^{\lambda x}$, where $\lambda$ is an empirically chosen parameter.
 
 ## Least Recent Used
 
