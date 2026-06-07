@@ -38,3 +38,11 @@ weight = 2
 name = "Tags"
 url = "/tags"
 weight = 4
+
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'images'
+target = 'static/images'
