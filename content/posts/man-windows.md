@@ -8,6 +8,8 @@ tags: ["windows", "manuel"]
 toc: true
 ---
 
+# Network Problems
+
 ## DNS_PROBE_FINISHED_NO_INTERNET
 
 Sometimes, when we suddenly close the connection with hotspot networks, the Windows will encounter this problem.
@@ -22,6 +24,8 @@ netsh int ip reset
 ```
 
 The above instructions aim to reset Windows network caches totally.
+
+# UI Problems
 
 ## Set detailed menu as default in Windows 11
 

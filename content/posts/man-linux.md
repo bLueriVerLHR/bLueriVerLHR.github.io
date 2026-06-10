@@ -8,17 +8,9 @@ tags: ["linux", "manuel"]
 toc: true
 ---
 
-The shell used in the article is `bash`.
-Information about the Linux release used in this article:
+# Linux Variables
 
-```
-blur@blur-personal: ~$ uname -a
-Linux blur-personal 5.15.153.1-microsoft-standard-WSL2 #1 SMP Fri Mar 29 23:14:13 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
-```
-
-## Linux Variables
-
-### PATH
+## PATH
 
 `PATH` refers to the places where will shell find programs.
 The order of paths in `PATH` will define the priority that the shell will use when there is two programs with the same name.
@@ -33,7 +25,9 @@ $ which gcc
 ~/Software/gcc
 ```
 
-### uname
+# Linux Tools
+
+## uname
 
 `uname` can print certain system information.
 Usually, we use `uname -r` to see information about kernel release.
@@ -42,6 +36,23 @@ Usually, we use `uname -r` to see information about kernel release.
 $ uname -r
 5.15.153.1-microsoft-standard-WSL2
 ```
+
+## Terminal Process Detachment
+
+When a process is running in the foreground, you can detach it to run in the background.
+
+``` bash
+# 1. Press Ctrl+Z to suspend the process
+# 2. Type bg to resume it in the background
+bg
+
+# 3. Type disown to detach from the current shell
+disown
+```
+
+> **Note:** After `disown`, the process will continue running even if you close the terminal, but output will still print to the terminal (if any).
+
+# Linux Development
 
 ## Linux Kernel Development on VSCode
 
@@ -116,20 +127,6 @@ apt-get install -y kitware-archive-keyring
 apt-get install -y cmake
 ```
 
-## Terminal Process Detachment
-
-When a process is running in the foreground, you can detach it to run in the background.
-
-``` bash
-# 1. Press Ctrl+Z to suspend the process
-# 2. Type bg to resume it in the background
-bg
-
-# 3. Type disown to detach from the current shell
-disown
-```
-
-> **Note:** After `disown`, the process will continue running even if you close the terminal, but output will still print to the terminal (if any).
 
 
 

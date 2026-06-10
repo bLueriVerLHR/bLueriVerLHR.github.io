@@ -8,6 +8,14 @@ tags: ["git", "manuel"]
 toc: true
 ---
 
+## undo local modifications
+
+Sometimes, we need to undo local experimental modifications.
+
+``` bash
+git checkout -- .
+```
+
 ## clear local cache
 
 Sometimes we need to clear local cache to activate `.gitignore` or `.gitmodules` rules.
