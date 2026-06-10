@@ -8,7 +8,7 @@ tags: ["cpp", "coroutine", "asynchronous"]
 toc: true
 ---
 
-# Before We Start
+## Before We Start
 
 When you hear "asynchronous programming", you might ask: what is it, and why should I care?
 
@@ -54,7 +54,7 @@ All of this can happen in a **single thread**, using time more efficiently — s
 If that’s exactly what you’re thinking, then let me introduce you to **asynchronous programming**, because that’s what it was built for.  
 Sure, there might be even better ways to handle tasks efficiently that we haven’t discovered yet. But for now, let’s focus on the async programming we actually want to do.
 
-# Asynchronous Programming
+## Asynchronous Programming
 
 When you have multiple tasks that don’t depend on each other too much, asynchronous programming is a solid choice.  
 It works especially well for tasks that need to wait for some event to happen.
@@ -65,7 +65,7 @@ Once the I/O completes, the data is already in the buffer. You just get notified
 This is called the **proactor pattern** — because the I/O operation finishes *before* you’re notified.  
 If instead you get notified when it’s *time* to do an I/O (without waiting for it to start), that’s the **reactor pattern**. In that case, you still have to handle the actual I/O operations yourself.
 
-## std::promise — std::future
+### std::promise — std::future
 
 From the example above, you can see we’re essentially letting the hardware make a promise that it will write the received data into the buffer sometime soon. That’s the idea behind `promise` and `future`.  
 In C++, these are introduced in [`<future>`](https://cppreference.com/cpp/header/future). Here’s a simple example:
@@ -123,7 +123,7 @@ You can wrap a function with `std::packaged_task`, then ship it off to a thread 
 
 In addition to wrapping a task, `std::packaged_task` can use its `make_ready_at_thread_exit` member to delay making the future ready until the thread is fully destroyed. Meanwhile, other threads keep waiting. When the thread that holds the task is destructed, the future becomes ready, and any waiting threads can continue.
 
-## std::async
+### std::async
 
 The promise-future example manually spins up a thread to simulate an asynchronous task. That might feel a bit too deliberate — having to create the promise from the main thread.  
 So C++ `<future>` also gives us a convenience function: `std::async`, to kick off an async task more easily. Here’s an example:
@@ -170,7 +170,7 @@ You can use it like: `std::async(std::launch::async, func, args)`.
 
 > If you want to limit the number of threads launched by `std::async`, use a semaphore.
 
-## Conclusion
+### Conclusion
 
 In this section, we briefly talked about C++’s support for async programming. But we didn’t touch on scheduling — the functions we wrote weren’t really designed to be scheduled.
 
@@ -178,7 +178,7 @@ I used to call `sched_yield()` from `<sched.h>` on Linux to bump a thread to the
 
 In the next chapter, we’ll dive into coroutines — functions you can manage with fine-grained control.
 
-# Coroutine
+## Coroutine
 
 Coroutines in C++ are more like syntactic sugar than a whole new concept. If I had to define a coroutine, I’d say:
 

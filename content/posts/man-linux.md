@@ -8,9 +8,9 @@ tags: ["linux", "manuel"]
 toc: true
 ---
 
-# Linux Variables
+## Linux Variables
 
-## PATH
+### PATH
 
 `PATH` refers to the places where will shell find programs.
 The order of paths in `PATH` will define the priority that the shell will use when there is two programs with the same name.
@@ -25,9 +25,9 @@ $ which gcc
 ~/Software/gcc
 ```
 
-# Linux Tools
+## Linux Tools
 
-## uname
+### uname
 
 `uname` can print certain system information.
 Usually, we use `uname -r` to see information about kernel release.
@@ -37,7 +37,7 @@ $ uname -r
 5.15.153.1-microsoft-standard-WSL2
 ```
 
-## Terminal Process Detachment
+### Terminal Process Detachment
 
 When a process is running in the foreground, you can detach it to run in the background.
 
@@ -52,9 +52,9 @@ disown
 
 > **Note:** After `disown`, the process will continue running even if you close the terminal, but output will still print to the terminal (if any).
 
-# Linux Development
+## Linux Development
 
-## Linux Kernel Development on VSCode
+### Linux Kernel Development on VSCode
 
 VSCode extensions has some functions that will do no help and even disturb your development in Linux Kernel Development (LKD in abbr.).
 If we set the global settings of VSCode to cater for LKD, it will break other develop environment.
@@ -102,7 +102,7 @@ An example `c_cpp_properties.json` is shown as below:
 }
 ```
 
-## ubuntu:noble Configuration
+### ubuntu:noble Configuration
 
 Use `PPA` first: (need `sudo`)
 

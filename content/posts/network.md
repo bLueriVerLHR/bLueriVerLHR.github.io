@@ -8,12 +8,12 @@ tags: ["algorithm"]
 toc: true
 ---
 
-# Network Programming
+## Network Programming
 
 Network programming is not that protable for naive C/C++.
 How to write code for network communication largely depends on the operating system. 
 
-## Linux
+### Linux
 
 Common **server** side should do following calls:
 
