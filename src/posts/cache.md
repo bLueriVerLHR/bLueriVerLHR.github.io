@@ -37,7 +37,7 @@ Depending on the status recorded for each cache line — such as recency, freque
 |Shepherd Cache (SC)[^SC]| | | | |Recency|
 |Least Frequent Used (LFU)|Frequency=0|Increase Frequency|n/a|LFU|Frequency|
 |Frequency-Based Replacement (FBR)|MRU, Frequency = 0|MRU, Frequency++ if not in new section|Move 1 position towards LRU|LFU line in old section|Recency, Frequency|
-|Least Recently/Frequently Used (LRFU)[^LRFU]|$CRF(b)=F(0)$, $LAST(b)=t_c$|$CRF(b)=F(0)+F(t_c–LAST(b))*CRF_{last}(b)$, $LAST(b)=t_c$|$t_c=t_c+1$|Line with min  CRF value|CRF|
+|Least Recently/Frequently Used (LRFU)[^LRFU]|$CRF(b)=F(0)$, $LAST(b)=t_c$|$CRF(b)=F(0)+F(t_c-LAST(b))*CRF_{last}(b)$, $LAST(b)=t_c$|$t_c=t_c+1$|Line with min  CRF value|CRF|
 
 [^MRU]: The purpose of MRU is to solve the _thrashing_. So it keeps the LRU lines for further fetching.
 
