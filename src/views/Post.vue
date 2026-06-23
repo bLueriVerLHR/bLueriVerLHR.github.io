@@ -76,8 +76,15 @@ function scrollTo(id) {
   const el = document.getElementById(id)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    history.replaceState(null, null, '#' + id)
   }
+}
+
+function onBodyClick(e) {
+  const link = e.target.closest('a[href^="#"]')
+  if (!link) return
+  const id = link.getAttribute('href').slice(1)
+  if (id) scrollTo(id)
+  e.preventDefault()
 }
 
 let observer = null
@@ -105,11 +112,17 @@ async function fetchPost() {
   loading.value = false
   await nextTick()
   observeHeadings()
+  if (bodyRef.value) {
+    bodyRef.value.addEventListener('click', onBodyClick)
+  }
 }
 
 onMounted(fetchPost)
 watch(() => props.slug, fetchPost)
 onUnmounted(() => {
   if (observer) observer.disconnect()
+  if (bodyRef.value) {
+    bodyRef.value.removeEventListener('click', onBodyClick)
+  }
 })
 </script>
