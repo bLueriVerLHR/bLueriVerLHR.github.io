@@ -1,3 +1,4 @@
 .vscode/
+.pi/
 dist/
 node_modules/
