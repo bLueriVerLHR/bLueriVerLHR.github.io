@@ -19,8 +19,6 @@ body {
 a { color: inherit; text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 2px solid; outline-offset: 4px; }
-.skip-link { position: absolute; top: -5rem; left: 1rem; padding: 0.25rem 0.5rem; background: #fff; }
-.skip-link:focus { top: 1rem; }
 
 .manual-header, footer { display: flex; justify-content: space-between; gap: 1rem; }
 .manual-header { margin-bottom: 3rem; font-size: 0.85rem; }
@@ -38,6 +36,7 @@ p, ul, ol, dl, pre, blockquote, table { margin-top: 0; margin-bottom: 1rem; }
 .post-list dd { margin: 0.25rem 0 0 4ch; }
 .post-list dd p { margin-bottom: 0.25rem; }
 .post-list .meta { font-size: 0.85rem; }
+.post-list .tag { margin-left: 1ch; color: #555; }
 ul, ol { padding-left: 3ch; }
 li > p { margin-bottom: 0.5rem; }
 blockquote { border-left: 1px solid #999; padding-left: 2ch; color: #555; }
@@ -45,14 +44,50 @@ blockquote > :last-child { margin-bottom: 0; }
 
 code, pre { font: inherit; }
 :not(pre) > code { font-weight: bold; }
-pre { padding: 0.5rem 0; overflow-x: auto; white-space: pre; }
-.table-wrapper { overflow-x: auto; margin-bottom: 1rem; }
+pre { padding: 0.5rem 0; white-space: pre; }
+pre.shiki code { counter-reset: line; }
+pre.shiki .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 3ch;
+  margin-right: 2ch;
+  color: #999;
+  text-align: right;
+  user-select: none;
+}
+
+/* "\\( \\)" and "\\[ \\]" are turned into MathML when the site is built. */
+math { font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", math, serif; }
+math.tml-display { display: block; width: 100%; }
+/* Temml marks the cells of aligned/array environments with these classes. Chromium
+   only honours the prefixed values on MathML cells, so both lines are needed;
+   without them every cell is centred and the `&` points drift. */
+.tml-right { text-align: -webkit-right; text-align: right; }
+.tml-left { text-align: -webkit-left; text-align: left; }
+.math-block { width: fit-content; max-width: 100%; margin-bottom: 1rem; padding-bottom: 0.25rem; }
+/* A numbered equation spans the column, so its number sits in the right margin
+   and lines up with every other number in the article. */
+.math-block.numbered { position: relative; width: auto; }
+.equation-number { position: absolute; top: 50%; right: 0; transform: translateY(-50%); font-variant-numeric: tabular-nums; }
+.equation-number a { color: inherit; text-decoration: none; }
+.equation-number a:hover { text-decoration: underline; }
+.table-wrapper { margin-bottom: 1rem; }
 table { border-collapse: collapse; min-width: 100%; font-size: 0.9rem; }
 th, td { border-bottom: 1px solid #ccc; padding: 0.4rem 1ch; text-align: left; vertical-align: top; }
 th { border-bottom-color: currentColor; }
 img { max-width: 100%; height: auto; }
 hr { border: 0; border-top: 1px solid #ccc; margin: 2rem 0; }
 [id] { scroll-margin-top: 1rem; }
+
+/* Wide blocks scroll sideways instead of breaking the column; the scrollbar is a
+   thin thumb on a transparent track, so it reads as a hairline, not as a control. */
+pre, .math-block, .table-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #c9c9c9 transparent;
+}
 
 @media (max-width: 540px) {
   body { padding: 1.25rem 1rem; }
@@ -66,4 +101,5 @@ hr { border: 0; border-top: 1px solid #ccc; margin: 2rem 0; }
   body { max-width: none; padding: 0; color: #000; }
   footer { display: none; }
   pre { white-space: pre-wrap; }
+  pre, .math-block, .table-wrapper { overflow: visible; }
 }

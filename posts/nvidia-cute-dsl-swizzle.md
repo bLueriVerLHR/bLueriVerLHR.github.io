@@ -1,4 +1,11 @@
-# NVIDIA CuTe Swizzle
+---
+title: "NVIDIA CuTe Swizzle"
+authors: ["bLueriVerLHR"]
+date: 2026-10-16T01:02:00+08:00
+tags: ["CUDA", "CuTe DSL", "Swizzle"]
+section: 3
+draft: false
+---
 
 NVIDIA CUTLASS Python DSL 提供了一个函数 `make_swizzle(b, m, s)`，用于构造 `Swizzle` 对象。`b`、`m`、`s` 三个参数分别对应 `BBits`、`MBase`、`SShift` 三个元素，是底层 MLIR 构造 `!cute.swizzle<"S<{b},{m},{s}>">` 的三个参数。
 

@@ -3,12 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node build.js dev",
-    "build": "node build.js",
-    "preview": "node build.js preview"
+    "dev": "tsx build.tsx dev",
+    "build": "tsx build.tsx",
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "marked": "^15.0.12",
+    "preact": "^11.1.1",
+    "preact-render-to-string": "^6.8.2",
+    "shiki": "^4.5.0",
+    "temml": "^0.14.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
     "yaml": "^2.8.0"
   }
 }

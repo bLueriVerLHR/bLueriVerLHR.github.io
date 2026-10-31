@@ -2,9 +2,9 @@
 title: "新手学术写作中的若干常见问题"
 authors: ["AiX-im", "Wangqge", "bLueriVerLHR"]
 date: 2024-09-21T17:50:27+08:00
-draft: false
 tags: ["writing paper"]
-toc: true
+section: 7
+draft: false
 ---
 
 写一篇学术论文是困难的，写一篇高水平学术论文是困难的，写一篇严谨且有价值的学术论文是更加困难的。
