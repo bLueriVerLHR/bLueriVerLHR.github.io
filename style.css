@@ -97,6 +97,13 @@ pre, .math-block, .table-wrapper {
   .post-list dd { margin-left: 2ch; }
 }
 
+/* The banner carries three items - name, site, name again. Under ~380px the name
+   alone already fills the line, so drop the site label rather than let both items
+   break mid-word. */
+@media (max-width: 380px) {
+  .manual-header > span { display: none; }
+}
+
 @media print {
   body { max-width: none; padding: 0; color: #000; }
   footer { display: none; }
