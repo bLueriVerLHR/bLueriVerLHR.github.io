@@ -4,7 +4,7 @@ authors: ["bLueriVerLHR"]
 date: 2026-10-11T01:39:00+08:00
 tags: ["CUDA", "Attention"]
 section: 7
-draft: false
+draft: true
 ---
 
 FlashAttention 结合 Online Softmax 和 Tiled Matrix Multiplication 做到了极高的墙钟加速同时，也减少了内存需求。接下来以自顶向下的方式，逐渐讲述一个 FlashAttention 是怎么设计出来的。

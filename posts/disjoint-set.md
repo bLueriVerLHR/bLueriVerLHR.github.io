@@ -4,8 +4,10 @@ authors: ["bLueriVerLHR"]
 date: 2026-10-31T23:45:00+08:00
 tags: ["Data Structure", "Algorithm"]
 section: 7
-draft: true
+draft: false
 ---
+
+并查集，适合集合并操作的数据结构。
 
 ```cpp
 template <typename value_t>
@@ -28,7 +30,10 @@ public:
         assert(x < father_.size());
 
         value_t root = x;
-        while (father_[root] != root) root = father_[root];
+        while (father_[root] != root) {
+            root = father_[root];
+        }
+
         while (father_[x] != root) {
             value_t next = father_[x];
             father_[x] = root;
@@ -49,6 +54,7 @@ public:
         if (x == y) return false;
         if (rank_[x] < rank_[y]) std::swap(x, y);
         else if (rank_[x] == rank_[y]) rank_[x] += 1;
+
         father_[y] = x;
         return true;
     }
